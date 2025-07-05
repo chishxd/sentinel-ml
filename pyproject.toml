@@ -1,0 +1,17 @@
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+extend-select = ["E", "F", "W"] # Basic pycodestyle + pyflakes + warnings
+
+# Example: ignore specific rules if needed
+# ignore = ["E203", "E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.ruff.lint]
+# If you want Ruff to fix on save, or do aggressive checks, you can tune here.
