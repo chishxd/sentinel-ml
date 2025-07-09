@@ -1,3 +1,20 @@
+[project]
+name = "sentinel-ml"
+version = "0.1.0"
+description = "A microservice that monitors deployed ML models for data drift, input anomalies, and performance drops."
+license = { text = "MIT" }
+
+[[project.authors]]
+name = "Chinmay Shet"
+email = "chishxd@gmail.com"
+
+[[project.authors]]
+name = "Vedant Patil"
+email = "vedant@example.com"
+
+[tool.poetry]
+# Leave empty or only use for Poetry-specific configs
+
 [tool.black]
 line-length = 88
 target-version = ["py313"]
