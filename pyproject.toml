@@ -13,7 +13,9 @@ name = "Vedant Patil"
 email = "vedant@example.com"
 
 [tool.poetry]
-# Leave empty or only use for Poetry-specific configs
+packages = [
+  { include = "sentinel_ml", from = "src" }
+]
 
 [tool.black]
 line-length = 88
