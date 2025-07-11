@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container"> 
+        <header>
+            <img src="logo.png" alt="Sentinel Logo" class="logo">
+            <h1>Sentinel</h1>   
+        </header>    
+        <main class="dashboard">
+
+            <section class="grid row">
+                <article class="card">
+                    <div class="card-header">Model</div> 
+                    <div class="card-content centered">Model Name</div>    
+                </article>
+                <article class="card">
+                    <div class="card-header">Model Calls</div> 
+                    <div class="card-content centered large-text">911</div>    
+                </article>
+                <article class="card">
+                    <div class="card-header">Activity Status</div> 
+                    <div class="card-content centered"><span class="status-online">ONLINE</span></div>    
+                </article>
+            </section>  
+
+            <section class="grid row">
+                <article class="card full-width">
+                    <div class="card-header">Target and Prediction</div> 
+                    <div class="prediction-table">
+                        <div class="table-header">Features</div>
+                        <div class="table-header">Baseline Mean</div>
+                        <div class="table-header">Current mean</div>
+                        <div class="table-header">Drift %</div>
+                        <div class="table-header">Alert</div>
+
+                        <div>Age</div>
+                        <div>30.2</div>
+                        <div>45.7</div>
+                        <div>51%</div>
+                        <div><span class="alert-high">High</span></div>
+            
+                        <div>Age</div>
+                        <div>30.2</div>
+                        <div>45.7</div>
+                        <div>51%</div>
+                        <div><span class="alert-high">High</span></div>
+                    </div>
+                </article>
+            </section> 
+
+            <section class="grid row last-row">
+                <article class="card">
+                    <div class="card-header">Accuracy Results</div>
+                    <div class="card-content">
+                        <p>Accuracy: 91%</p>   
+                        <p>F1 Score: 0.88</p>
+                    </div> 
+                </article>
+                <article class="card">
+                    <div class="card-header">Alerts</div>
+                    <div class="card-content">
+                        <p>High Alert in: Age</p>
+                        <p class="last-checked">Last Checked: 3 minutes ago</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

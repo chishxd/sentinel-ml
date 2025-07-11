@@ -1,0 +1,127 @@
+:root {
+    --bg-color: #1e1e1e;
+    --card-bg-color: #2d2d2d;
+    --border-color: #4a4a4a;
+    --text-color: #e0e0e0;
+    --text-secondary-color: #a0a0a0;
+    --status-online-color: #2ecc71;
+    --alert-high-color: #e74c3c;
+    --card-padding: 16px;
+    --grid-gap: 24px;
+    --border-radius: 8px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: system-ui, sans-serif;
+    padding: var(--grid-gap);
+    margin: 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds space between the logo and the text */
+}
+
+.logo {
+    width: 40px; /* Adjust the size of your logo */
+    height: 40px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: var(--grid-gap);
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--grid-gap);
+}
+
+.row {
+    display: grid;
+    gap: var(--grid-gap);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.last-row {
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.card-header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: var(--card-padding);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-content {
+    padding: var(--card-padding);
+}
+
+.card-content p {
+    margin: 0 0 8px 0;
+}
+
+.centered {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.large-text {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.prediction-table {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: var(--card-padding);
+    padding: var(--card-padding);
+    align-items: center;
+}
+
+.table-header {
+    font-weight: 500;
+    color: var(--text-secondary-color);
+}
+
+.status-online {
+    color: var(--status-online-color);
+    font-weight: 700;
+}
+.alert-high {
+    color: var(--alert-high-color);
+    font-weight: 700;
+}
+.last-checked {
+    color: var(--text-secondary-color);
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .row, .last-row {
+        grid-template-columns: 1fr;
+    }
+}
